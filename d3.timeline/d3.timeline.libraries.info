@@ -1,0 +1,29 @@
+name = Events Timeline 
+description = D3 Timeline based on http://bl.ocks.org/rengel-de/5603464
+files[js][] = timeline.js
+files[css][] = timeline.css
+
+version = 0.1
+dependencies[] = d3.extend
+dependencies[] = d3.tooltip
+
+
+views[fields][rows][__data_type] = 2dnav  ;  2-dimensional numeric array of associative (mapped) arrays of row values
+
+views[fields][rows][x_label][label] = X label
+views[fields][rows][x_label][type] = string
+views[fields][rows][x_label][description] = The label that appears on the X axis.
+
+
+views[fields][rows][value] = { __repeated: TRUE, __cardinality: 0, label: Numeric value, type: integer, description: The numeric value that will be used to plot each dot (circle) on the line }
+
+
+views[fields][legend][__cardinality] = 0
+views[fields][legend][__data_type] = 1dn 
+views[fields][legend][label] = Line label
+views[fields][legend][description] = The meaning of each different line.
+views[fields][legend][type] = string
+
+views[settings] = views-settings.php
+
+ 
